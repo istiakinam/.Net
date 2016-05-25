@@ -14,20 +14,22 @@
                 <td>Username</td>
                 <td><asp:TextBox ID="txtUsername" runat="server"></asp:TextBox></td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Need Username"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                        ControlToValidate="txtUsername" ErrorMessage="Need Username"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td>Password</td>
                 <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox></td>
                 <td>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Need Password"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                        ControlToValidate="txtPassword" ErrorMessage="Need Password"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td></td>
-                <td><asp:Button ID="btnLogin" runat="server" Text="Login" /></td>
-                <td><asp:Button ID="btnRegister" runat="server" Text="Register" /></td>
+                <td><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /></td>
+                <td><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CausesValidation ="False"/></td>
             </tr>
         </table>
     </div>    

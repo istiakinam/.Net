@@ -1,0 +1,87 @@
+<configuration>
+  <connectionStrings>
+    <add name ="DBConnection" connectionString="Data Source=DOLPHIN\SQL2014;
+initial catalog=Nabila_1;trusted_connection=true"
+/>
+  </connectionStrings>
+  
+
+
+.....................................................................
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+
+namespace WebApplication3
+{
+    public partial class WebForm2 : System.Web.UI.Page
+    {
+        public static class MyConnection
+        {
+
+            public static SqlConnection getConnection()
+            {
+                string conn = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString;
+                SqlConnection myConn = new SqlConnection(conn);
+                return myConn;
+            }
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        protected void Btnlogin_Click(object sender, EventArgs e)
+        { var con = MyConnection.getConnection();
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+        
+     
+            }
+            SqlCommand Scmd = new SqlCommand("NaLogin", con);
+            Scmd.CommandType = CommandType.StoredProcedure;
+            Scmd.Parameters.AddWithValue("@Username", txtUname1.Text);
+            Scmd.Parameters.AddWithValue("@Password", txtPassword.Text);
+            SqlDataReader Dr = Scmd.ExecuteReader();
+            if (Dr.Read())
+            {
+                Response.Redirect("ViewDetails");
+            }
+            else
+            {
+                Response.Write("Invalid credential");
+            }
+            con.Close();
+        }
+   }
+************************************************
+
+ Procedure [dbo].[NaLogin](@Username varchar(50),@Password varchar(50))
+as
+Select * from tblSignIn where Name=@Username and Pasword=@Password 
+
+=========================================
+<configuration>
+  
+  <appSettings>
+    
+    <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />                    
+  </appSettings>
+  <connectionStrings>
+    <add name="DBConnection" connectionString ="Data source=UB40203PC32\SQLExpress;initial catalog=Arik;trusted_connection=true"/>
+  </connectionStrings>
+    <system.web>
+      <compilation debug="true" targetFramework="4.5" />
+      <httpRuntime targetFramework="4.5" />
+    </system.web>
+
+</configuration>
