@@ -1,0 +1,5 @@
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\PracticeForm\PracticeForm\bin\PracticeForm.dll
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\PracticeForm\PracticeForm\bin\PracticeForm.pdb
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\PracticeForm\PracticeForm\obj\Debug\PracticeForm.csprojResolveAssemblyReference.cache
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\PracticeForm\PracticeForm\obj\Debug\PracticeForm.dll
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\PracticeForm\PracticeForm\obj\Debug\PracticeForm.pdb
