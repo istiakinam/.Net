@@ -1,0 +1,5 @@
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\LinqPractice\LinqPractice\obj\Debug\LinqPractice.csprojResolveAssemblyReference.cache
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\LinqPractice\LinqPractice\bin\LinqPractice.dll
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\LinqPractice\LinqPractice\bin\LinqPractice.pdb
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\LinqPractice\LinqPractice\obj\Debug\LinqPractice.dll
+G:\BRCU\TopUp\Top Up IT Training (Dot Net)\LinqPractice\LinqPractice\obj\Debug\LinqPractice.pdb

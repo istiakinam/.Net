@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="myPractice" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ISTIAK-LPT\SQLEXPRESS;Initial Catalog=myPractice;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="myPracticeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LinqTbl" Member="LinqTbls">
+    <Type Name="LinqTbl">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Contact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.LqDelete" Method="LqDelete">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Contact" Parameter="contact" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LqInsert" Method="LqInsert">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Contact" Parameter="contact" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.LqSelect" Method="LqSelect">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Contact" Parameter="contact" Type="System.Int32" DbType="Int" />
+    <ElementType Name="LqSelectResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Contact" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.LqUpdate" Method="LqUpdate">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Contact" Parameter="contact" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
